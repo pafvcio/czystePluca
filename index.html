@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script src="js/pgb.js"></script>
+    <script src="cordova.js"></script>
+</head>
+
+
+
+<body onload="init()">
+    <style>
+        .mainText {
+            text-align: left;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+
+    <h1>Czyste płuca</h1>
+
+    <table>
+        <tr>
+            <th class="mainText">Jakość powietrza: </th>
+            <th class="mainText" id="airQualityIndex">0</th>
+            <th>CAQI</th>
+        </tr>
+        <tr>
+            <th>PM10: </th>
+            <th id="pm10">0</th>
+            <th>μg/m3</th>
+        </tr>
+        <tr>
+            <th>PM25: </th>
+            <th id="pm25">0</th>
+            <th>μg/m3</th>
+        </tr>
+        <tr>
+            <th>Ciśnienie: </th>
+            <th id="pressure">0</th>
+            <th>hPa</th>
+        </tr>
+        <tr>
+            <th>Wilgotność: </th>
+            <th id="humidity">0</th>
+            <th>%</th>
+        </tr>
+        <tr>
+            <th>Temperatura: </th>
+            <th id="temperature">0</th>
+            <th>°C</th>
+        </tr>
+        <tr>
+            <th>Stopień: </th>
+            <th id="pollutionLevel">0</th>
+        </tr>
+    </table>
+
+    <p id="dp"></p> <input type="button" onclick="onDeviceReady()" value="test">
+    <p id="dp"></p> <input type="button" onclick="checkAir()" value="pobierz dane powietrza">
+
+    <script>   
+
+    </script>
+</body>
+</html>
