@@ -2,10 +2,6 @@ function init() {
     document.addEventListener("deviceready", onDeviceReady, false);
 }
 
-function onDeviceReady() {
-    navigator.notification.beep(1);
-}
-
 function checkAir() {
     getLocation();
 }
@@ -41,11 +37,11 @@ function getAirlyData(geo) {
             pressure: parseFloat(obj.currentMeasurements.pressure / 100).toFixed(2),
             humidity: parseFloat(obj.currentMeasurements.humidity).toFixed(2),
             temperature: parseFloat(obj.currentMeasurements.temperature).toFixed(2),
-            //pollutionLevel: obj.currentMeasurements.pollutionLevel
         }
 
         if (airData.airQualityIndex != 'NaN') {
             fillAirData(airData);
+            navigator.notification.beep(1);
         }
         else {
             alert('Nie ma czujnikow w Twojej okolicy!')
@@ -61,7 +57,6 @@ function fillAirData(airData) {
     document.getElementById("pressure").innerHTML = airData.pressure;
     document.getElementById("humidity").innerHTML = airData.humidity;
     document.getElementById("temperature").innerHTML = airData.temperature;
-    //document.getElementById("pollutionLevel").innerHTML = airData.pollutionLevel;
 
     document.getElementById("canGoWalk").innerHTML = checkCanAirActivity(airData.airQualityIndex,75,90)
     document.getElementById("canCycling").innerHTML = checkCanAirActivity(airData.airQualityIndex, 50, 75)

@@ -1,0 +1,109 @@
+body
+{
+ background-color: #303030;
+ color: #ffffff;
+ font-family: 'Josefin Sans', sans-serif;
+ font-size: 20px;
+}
+
+#container
+{
+	width: auto;
+	margin-left: center;
+}
+
+.rectangle
+{
+	width:  480px;
+	margin: 20px;
+}
+
+.square
+{
+	width: 50%;
+	float: left;
+}
+
+#logo 
+{
+	float: left;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:40px;
+	width:600px;
+	
+}
+#zegar
+{
+	float: left;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:40px;
+	
+}
+.tile1
+{
+	margin: 10px;
+	width: 230px;
+	height: 142px;
+	background-color: #3095d3;
+	float: left;
+}
+.tile5
+{
+	margin: 10px;
+	width: 480px;
+	height: 304px;
+	background-color: #666666;
+	
+}
+.yt
+{
+	margin: 10px;
+	width: 105px;
+	height: 142px;
+	background-color: #d94348;
+	float: left;
+}
+.fb
+{
+	margin: 10px;
+	width: 105px;
+	height: 142px;
+	background-color: #4668b3;
+	float: left;
+}
+.gplus
+{
+	margin: 10px;
+	width: 105px;
+	height: 142px;
+	background-color: #d95333;
+	float: left;
+}
+.tw
+{
+	margin: 10px;
+	width: 105px;
+	height: 142px;
+	background-color: #3095d3;
+	float: left;
+}
+.tile2
+{
+	margin: 10px;
+	width: 480px;
+	height: 304px;
+	background-color: #666666;
+	float: left;
+	text-align: center;
+}
+.map {
+		
+        width: 480px;
+		height: 304px;
+        }
+.clic {
+	margin-left: 40px;
+	margin-top: 50px;
+	
+}
+

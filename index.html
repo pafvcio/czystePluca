@@ -1,85 +1,106 @@
-﻿<!DOCTYPE html>
-
-<html>
+﻿<DOCTYPE HTML>
+<html lang="pl">
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <script src="js/pgb.js"></script>
-    <script src="cordova.js"></script>
-</head>
-
-
-
-<body onload="init()">
-    <style>
-        .mainText {
-            text-align: left;
-        }
-
-        th {
-            text-align: left;
-        }
-    </style>
-
-    <h1>Czyste płuca</h1>
-
-    <table>
-        <tr>
-            <th>Jakość powietrza: </th>
-            <th id="airQuality">-</th>
-        </tr>
-        <tr>
-            <th>CAQI </th>
-            <th id="airQualityIndex">0</th>
-            <th>CAQI</th>
-        </tr>
-        <tr>
-            <th>PM10: </th>
-            <th id="pm10">0</th>
-            <th>μg/m3</th>
-        </tr>
-        <tr>
-            <th>PM25: </th>
-            <th id="pm25">0</th>
-            <th>μg/m3</th>
-        </tr>
-        <tr>
-            <th>Ciśnienie: </th>
-            <th id="pressure">0</th>
-            <th>hPa</th>
-        </tr>
-        <tr>
-            <th>Wilgotność: </th>
-            <th id="humidity">0</th>
-            <th>%</th>
-        </tr>
-        <tr>
-            <th>Temperatura: </th>
-            <th id="temperature">0</th>
-            <th>°C</th>
-        </tr>
-        <!--<tr>
-            <th>Stopień: </th>
-            <th id="pollutionLevel">0</th>
-        </tr>-->
-        <tr>
-            <th>Wyjść na spacer: </th>
-            <th id="canGoWalk">-</th>
-        </tr>
-        <tr>
-            <th>Iść na rower: </th>
-            <th id="canCycling">-</th>
-        </tr>
-        <tr>
-            <th>Iść pobiegać: </th>
-            <th id="canRunning">-</th>
-        </tr>
-    </table>
-
-    <p id="dp"></p> <input type="button" onclick="onDeviceReady()" value="test">
-    <p id="dp"></p> <input type="button" onclick="checkAir()" value="pobierz dane powietrza">
-
-    <script>   
-
-    </script>
-</body>
-</html>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  
+  <script src="js/pgb.js"></script>
+  <script src="cordova.js"></script>
+  
+  <title>Czyste Płuca</title>
+  
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato" rel="stylesheet">
+ </head>
+ 
+ <body onload="odliczanie();">
+ 
+	<div id="container">
+	
+		<div class="rectangle">
+			<div id="logo">Czyste Płuca</div>
+			<div id="zegar">
+				 <script type="text/javascript">
+					document.getElementById("zegar").innerHTML =
+					dzien + "/" + miesiac + "/" + rok + " | " + godzina + ":" + minuta + ":" + sekunda;
+				</script>
+			</div>
+		
+			<div style="clear: both;"></div>
+			</div>
+			
+			<div class="square">
+			
+					<img class="map" src="img/smog.jpg"
+				</div>
+				<div style="clear: both;"></div>
+				<div class="tile1">
+					<input class="clic" type="button" onclick="checkAir()" value="pobierz dane powietrza">
+				</div>
+				<div class="tile1">1</div>
+				<div class="tile2">
+					<table>
+						<tr>
+                            <th>Jakość powietrza: </th>
+                            <th id="airQuality">-</th>
+						</tr>
+                        <tr>
+                            <th>CAQI </th>
+                            <th id="airQualityIndex">0</th>
+                        </tr>
+						<tr>
+							<th>PM10: </th>
+							<th id="pm10">0</th>
+							<th>μg/m3</th>
+						</tr>
+						<tr>
+							<th>PM25: </th>
+							<th id="pm25">0</th>
+							<th>μg/m3</th>
+						</tr>
+						<tr>
+							<th>Ciśnienie: </th>
+							<th id="pressure">0</th>
+							<th>hPa</th>
+						</tr>
+						<tr>
+							<th>Wilgotność: </th>
+							<th id="humidity">0</th>
+							<th>%</th>
+						</tr>
+						<tr>
+							<th>Temperatura: </th>
+							<th id="temperature">0</th>
+							<th>°C</th>
+						</tr>
+                        <tr>
+                            <th>Wyjść na spacer: </th>
+                            <th id="canGoWalk">-</th>
+                        </tr>
+                        <tr>
+                            <th>Iść na rower: </th>
+                            <th id="canCycling">-</th>
+                        </tr>
+                        <tr>
+                            <th>Iść pobiegać: </th>
+                            <th id="canRunning">-</th>
+                        </tr>
+					</table>
+				
+				</div>
+				<div style="clear: both;"></div>
+			
+			
+			
+				
+				
+			
+			
+			<div class="rectangle">2017 &copy; K.Tryba and P.Trystua - portfoilo. 
+			Programiści webowi zapraszają do współpracy !       
+			<p>K.Tryba@adress.com || P.Trystua@adress.com </p></div>
+		
+	</div>
+ 
+ </body>
+ </html>
