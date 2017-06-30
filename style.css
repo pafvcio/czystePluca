@@ -19,10 +19,10 @@ th {
 }
 
 #logo {
+    font-size: 38px;
     float: left;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 40px;
     width: 100%;
 }
 
@@ -30,8 +30,9 @@ th {
     text-align: center;
     float: left;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     width: 100%;
+    margin-bottom:5px;
 }
 
 .button {

@@ -37,7 +37,7 @@ function odliczanie() {
 function getAirlyData(geo) {
 
     var location = { latitude: geo.coords.latitude, longitude: geo.coords.longitude }
-    //location = { latitude: 50.09620, longitude: 19.76908 }
+    location = { latitude: 49.98917, longitude: 19.72743 }
 
     var request;
     url = 'https://airapi.airly.eu/v1/mapPoint/measurements?latitude=' + location.latitude + '&longitude=' + location.longitude;
@@ -61,6 +61,7 @@ function getAirlyData(geo) {
 
         if (airData.airQualityIndex != 'NaN') {
             fillAirData(airData);
+            addToLocalStorage(airData); 
             navigator.notification.beep(1);
         }
         else {
@@ -78,10 +79,20 @@ function fillAirData(airData) {
     document.getElementById("humidity").innerHTML = airData.humidity;
     document.getElementById("temperature").innerHTML = airData.temperature;
 
-    document.getElementById("canGoWalk").innerHTML = checkCanAirActivity(airData.airQualityIndex,75,90)
-    document.getElementById("canCycling").innerHTML = checkCanAirActivity(airData.airQualityIndex, 50, 75)
-    document.getElementById("canRunning").innerHTML = checkCanAirActivity(airData.airQualityIndex, 40, 60)
+    document.getElementById("canGoWalk").innerHTML = checkCanAirActivity(airData.airQualityIndex,65,80)
+    document.getElementById("canCycling").innerHTML = checkCanAirActivity(airData.airQualityIndex, 40, 65)
+    document.getElementById("canRunning").innerHTML = checkCanAirActivity(airData.airQualityIndex, 30, 50)
 
+}
+
+function addToLocalStorage(airData) {
+    localStorage.setItem('date', new Date().toString());
+    localStorage.setItem('airQualityIndex', airData.airQualityIndex);
+    localStorage.setItem('pm10', airData.pm10);
+    localStorage.setItem('pm25', airData.pm25);
+    localStorage.setItem('pressure', airData.pressure);
+    localStorage.setItem('humidity', airData.humidity);
+    localStorage.setItem('temperature', airData.temperature);
 }
 
 function getAirQuality(caqi) {
@@ -89,18 +100,23 @@ function getAirQuality(caqi) {
 
     if (caqi > 100) {
         text = 'Bardzo z³e';
+        document.getElementById("airQuality").style.color = "#ff8080";
     }
     else if (caqi > 75) {
         text = 'Z³e';
+        document.getElementById("airQuality").style.color = "#ffbf80";
     }
     else if (caqi > 50) {
         text = 'Œrednie';
+        document.getElementById("airQuality").style.color = "#ffff80";
     }
     else if (caqi > 25) {
         text = 'Dobre';
+        document.getElementById("airQuality").style.color = "#80ffaa";
     }
     else {
         text = 'Bardzo dobre';
+        document.getElementById("airQuality").style.color = "#80ffaa";
     }
 
     return text;
