@@ -37,7 +37,7 @@ function odliczanie() {
 function getAirlyData(geo) {
 
     var location = { latitude: geo.coords.latitude, longitude: geo.coords.longitude }
-    location = { latitude: 49.98917, longitude: 19.72743 }
+    //location = { latitude: 49.98917, longitude: 19.72743 }
 
     var request;
     url = 'https://airapi.airly.eu/v1/mapPoint/measurements?latitude=' + location.latitude + '&longitude=' + location.longitude;
@@ -107,7 +107,7 @@ function getAirQuality(caqi) {
         document.getElementById("airQuality").style.color = "#ffbf80";
     }
     else if (caqi > 50) {
-        text = 'Œrednie';
+        text = 'Srednie';
         document.getElementById("airQuality").style.color = "#ffff80";
     }
     else if (caqi > 25) {
@@ -129,7 +129,7 @@ function checkCanAirActivity(actualCaqi, maxCaqiWithoutMask, maxCaqi) {
         text = 'Tak!';
     }
     else if (actualCaqi < maxCaqi) {
-        text = 'Tak, ale ubierz maskê!';
+        text = 'Tak, ale ubierz maske!';
     }
     else {
         text = 'Nie!';
