@@ -85,14 +85,10 @@
 
   <!-- Define app icon for each platform. -->
   
-   <icon src="img/icon.png"  platform="android" width="180" height="180"    />
+   <icon src="img/icon.png"     />
 
   <!-- Define app splash screen for each platform. -->
-  <splash src="img/splashScreen.png" platform="android" width="720" height="1280" />
-
-  <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
-  </gap:config-file>
+  <splash src="img/splashScreen.png" />
 
   <!--
         Define access to external domains.
