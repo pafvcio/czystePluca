@@ -3,12 +3,24 @@ body {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
-    margin:20px;
+    margin: 20px;
+    height: auto;
+}
+
+th {
+    text-align: left;
+    font-size: 20px;
+}
+
+.rectangle {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 #logo {
     float: left;
-    text-align:center;
+    text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 40px;
     width: 100%;
@@ -29,7 +41,7 @@ body {
 
 .map {
     max-width: 100%;
-    height: auto;      
+    height: auto;
 }
 
 .clic {
@@ -58,8 +70,9 @@ body {
 
 .tile2 {
     margin-bottom: 10px;
+    padding: 5px;
     width: 100%;
-    height: 304px;
+    height: auto;
     background-color: #666666;
     float: left;
     text-align: center;
