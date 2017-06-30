@@ -9,13 +9,14 @@ body
 #container
 {
 	width: auto;
-	margin-left: center;
+	/*margin-left: center;*/
 }
 
 .rectangle
 {
-	width:  480px;
-	margin: 20px;
+	/*width:  480px;*/
+	width:  100%;
+	/*margin: 10px;*/
 }
 
 .square
@@ -29,7 +30,7 @@ body
 	float: left;
 	font-family: 'Josefin Sans', sans-serif;
 	font-size:40px;
-	width:600px;
+	width:100%;
 	
 }
 #zegar
@@ -42,7 +43,7 @@ body
 .tile1
 {
 	margin: 10px;
-	width: 230px;
+	width: 100%;
 	height: 142px;
 	background-color: #3095d3;
 	float: left;
@@ -50,56 +51,26 @@ body
 .tile5
 {
 	margin: 10px;
-	width: 480px;
+	width: 100%;
 	height: 304px;
 	background-color: #666666;
 	
 }
-.yt
-{
-	margin: 10px;
-	width: 105px;
-	height: 142px;
-	background-color: #d94348;
-	float: left;
-}
-.fb
-{
-	margin: 10px;
-	width: 105px;
-	height: 142px;
-	background-color: #4668b3;
-	float: left;
-}
-.gplus
-{
-	margin: 10px;
-	width: 105px;
-	height: 142px;
-	background-color: #d95333;
-	float: left;
-}
-.tw
-{
-	margin: 10px;
-	width: 105px;
-	height: 142px;
-	background-color: #3095d3;
-	float: left;
-}
 .tile2
 {
-	margin: 10px;
-	width: 480px;
+	/*margin: 10px;*/
+	/*width: 480px;*/
+    margin: 20px;
+	width: 100%;
 	height: 304px;
 	background-color: #666666;
 	float: left;
 	text-align: center;
 }
 .map {
-		
-        width: 480px;
-		height: 304px;
+		margin: 10px;
+        width: 100%;
+		/*height: 304px;*/
         }
 .clic {
 	margin-left: 40px;
